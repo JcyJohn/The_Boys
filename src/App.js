@@ -1,5 +1,4 @@
 import logo from './Images/logo.svg';
-import {useState} from "react"
 
 import './Demo.css';
 
@@ -8,7 +7,7 @@ function App() {
   return (
     <div className="App">
 
-      <img className="logo" src = {logo} />
+      <img className="logo" alt =" logo" src = {logo} />
 
     
       <div id = "text">
