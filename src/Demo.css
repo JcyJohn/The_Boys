@@ -1,3 +1,35 @@
+.App{
+    background-color: #171b24;
+    color: rgba(255, 255, 255, 0.815);
+    display: flex;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    transition: .5s;
+}
+.lightApp{
+    background-color: white;
+    color: #171b24;
+    transition: .5s;
+}.lightLogo{
+    height: 230px;
+    position: fixed;
+    z-index: 10;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    transform: translate(-50%,-50%);
+}#lightComingSoon{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    margin-top: 100px;
+    letter-spacing: 20px;
+
+}
 
 .logo{
     height: 230px;
@@ -10,7 +42,6 @@
     filter: drop-shadow( 0px 0px 4px #020202ab);
     animation-delay: 2s;
     animation: anim 10s infinite ease;
-    
 }
 
 @keyframes anim {
@@ -55,7 +86,7 @@
 }
 
 #Powered{
-    opacity: .4;
+    opacity: .5;
     animation: slidup 2s;
     letter-spacing: 10px;
 }
@@ -69,8 +100,65 @@
 
 
 @keyframes fadeaway {
-    0% {opacity: 1;}
+    0% {opacity: 0;}
     10%{opacity: 0;}
     80%{ opacity: 0;}
-    100%{opacity: 1;}
+    95%{opacity: 1;}
+    100%{opacity: 0;}
 }
+
+.togglebtn{
+    background-color: tomato;
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    height: 35px;
+    width: 60px;
+    border-radius: 35px;
+    cursor: pointer;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-appearance: none;
+    outline: none;
+    z-index:1000;
+    background-image: url("https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png");
+    background-size: cover;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.togglebtn:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 234, 115);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked {
+    background-image: url("https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png");
+    background-size: cover;
+}
+
+  
+  input:checked:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: rgb(147, 187, 247);
+  }
+  
+  .displaynone{
+      display: none;
+  }

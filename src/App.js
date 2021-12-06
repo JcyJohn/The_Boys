@@ -1,21 +1,29 @@
 import logo from './Images/logo.svg';
+import { useState } from 'react';
 
 import './Demo.css';
 
 function App() {
 
-  return (
-    <div className="App">
-
-      <img className="logo" alt =" logo" src = {logo} />
-
+ 
+    const [checked, setChecked] = useState(false)
+    const handleClick = () => setChecked(!checked)
     
+  return (
+    <div className={checked?"lightApp":"App"}>
+
+      <img className={checked?"lightLogo":"displaynone"} alt =" logo" src = {logo} />
+      <img className={checked?"displaynone":"logo"} alt =" logo" src = {logo} />
+
+      <input onClick={handleClick} checked={checked} type="checkbox" className="togglebtn" />
+   
+
       <div id = "text">
         <div id = "theboys">
         <div>The Boys</div>
-        {/* <div id = "comingSoon">Coming Soon</div> */}
         </div>
-        <div  id = "comingSoon"> Coming Soon</div>
+        <div  id = "lightComingSoon" className={checked?"":"displaynone"}> Coming Soon</div>
+        <div  id = "comingSoon" className={checked?"displaynone":""}> Coming Soon</div>
         <div id = "Powered">©2021</div>
       </div>
   
