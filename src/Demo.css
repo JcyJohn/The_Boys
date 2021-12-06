@@ -108,7 +108,7 @@
 }
 
 .togglebtn{
-    background-color: tomato;
+    background-color: transparent;
     position: fixed;
     right: 40px;
     top: 40px;
